@@ -2,16 +2,17 @@
  * @Author: chenjianli 15988827943@163.com
  * @Date: 2023-10-11 14:45:36
  * @LastEditors: chenjianli
- * @LastEditTime: 2023-10-15 18:02:03
+ * @LastEditTime: 2023-10-17 16:05:22
  * @Description: file content
  */
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CounterClass } from "../components/SetState"
 import Counter from "../components/UseState"
-import MyRoutes from "./MyRoute/MyRoutes";
+import Store from "../store/store";
+import { observer } from "mobx-react";
 
-export default function Hook() {
+function Hook() {
   console.log('render Hook num:')
   const [num, setNum] = useState(0)
   const navigate = useNavigate()
@@ -36,7 +37,10 @@ export default function Hook() {
       <Counter num={num}></Counter> */}
       <CounterClass num={0} />
       <Counter num={0}></Counter>
+      <div>store内容{Store.storeValue}</div>
+      <button onClick={() => Store.changeStoreValue()}>修改store值</button>
       
     </>
   )
 }
+export default observer(Hook)

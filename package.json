@@ -69,7 +69,15 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "parserOptions": {
+      "babelOptions": {
+      "presets": [
+        ["babel-preset-react-app", false],
+        "babel-preset-react-app/prod"
+        ]
+      }
+    }
   },
   "browserslist": {
     "production": [
@@ -146,5 +154,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0"
   }
 }
