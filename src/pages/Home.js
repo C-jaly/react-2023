@@ -2,13 +2,13 @@
  * @Author: chenjianli 15988827943@163.com
  * @Date: 2023-10-08 16:58:13
  * @LastEditors: chenjianli
- * @LastEditTime: 2023-10-17 09:15:57
+ * @LastEditTime: 2023-10-17 09:43:52
  * @Description: file content
  */
 import React from 'react'
 import HomeHeader from '../components/HomeHeader';
 import { mainContext } from '../context/context';
-import withrouter from '@/util/withrouter'
+import withrouter from '../util/withrouter'
 
 @withrouter
 class Home extends React.Component {
