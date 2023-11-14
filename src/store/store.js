@@ -2,7 +2,7 @@
  * @Author: chenjianli 15988827943@163.com
  * @Date: 2023-10-17 09:55:51
  * @LastEditors: chenjianli
- * @LastEditTime: 2023-10-17 16:30:20
+ * @LastEditTime: 2023-10-31 13:12:26
  * @Description: file content
  */
 import { observable, action, computed, makeAutoObservable } from "mobx";
@@ -22,11 +22,11 @@ import { observable, action, computed, makeAutoObservable } from "mobx";
 //   }
 // }
 class Store {
+  storeValue = 10;
+  storeList = [{name: 'xx', id: 1}];
   constructor() {
     makeAutoObservable(this)
   }
-  storeValue = 10;
-  storeList = [{name: 'xx', id: 1}];
   ListLength() {
     return this.storeList.length
   }

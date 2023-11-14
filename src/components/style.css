@@ -1,0 +1,82 @@
+:root {
+  --color: #3152b5;
+  --width: 100vw;
+  --height: calc(var(--width) / 2);
+}
+/* .outer {
+  width: 100%;
+  background-color: rgb(126, 191, 158);
+  padding: 25% 0;
+  position: relative;
+}
+.inner {
+  background-color: rgb(190, 27, 84);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* .inner {
+  background-color: rgb(126, 191, 158);
+  width: var(--width);
+  height: var(--height);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.outer {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(4, 100px);
+  column-gap: 10px;  /*边距*/
+  /* 网格区域命名 */
+  grid-template-areas: 'a b c'
+                        'd e f'
+                        'g h i';
+    /* 网格流动顺序 */
+  grid-auto-flow: column;
+  /* 单元格内部水平排布方式 start, end, stretch, center */
+  justify-items: center;
+  /* 单元格内部垂直排布方式 start, end, stretch, center */
+  align-items: center;
+  /* justify-content 网格在整个div的横向排布方式， 如果占满了就不生效了 center, flex-start, flex-end, space-between, space-around, space-evenly */
+  justify-content: center;
+  /* 同上，如果外部的div没有设置高度，那就不生效了 */
+  align-content: end; 
+}
+.inner1 {
+  /* 单元格所在区域 */
+  /* grid-area: a; */
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+}
+.inner2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  /* wrap, wrap-reverse, nowrap */
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.flex{
+  flex-basis: 200px;
+  /* flex-grow: 1; */
+  flex-shrink: 0;
+
+}
+.center-container {
+  width: 100px;
+  height: 100px;
+}

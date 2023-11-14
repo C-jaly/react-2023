@@ -2,7 +2,7 @@
  * @Author: chenjianli 15988827943@163.com
  * @Date: 2023-10-11 14:45:36
  * @LastEditors: chenjianli
- * @LastEditTime: 2023-10-17 16:05:22
+ * @LastEditTime: 2023-10-26 12:49:00
  * @Description: file content
  */
 import { useEffect, useState } from "react";
@@ -29,7 +29,7 @@ function Hook() {
   },[])
   return (
     <>
-    <button onClick={handleToAbout}>导航去About页面</button>
+    <button onClick={handleToAbout}>导航去About页面{Math.random()}</button>
     <button onClick={handleClick}>点击修改num</button>
       {/* React18后使用ReactDom.createRoot创建的应用setState都是异步的 */}
       {/* React18后使用ReactDom.render创建的应用setState在原生的dom事件以及setTimeout，promise都是同步的 */}
